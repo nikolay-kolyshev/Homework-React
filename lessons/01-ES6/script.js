@@ -15,7 +15,7 @@ const data = {
 
 const calcCash = (own = 0, ...args) => {
 	const [everyCash] = [...Array.prototype.slice.call(args)]
-	for (cash of everyCash)
+	for (let cash of everyCash)
 		own += +cash
 	return own
 }
