@@ -1,7 +1,7 @@
 const employers = ['АртеМ', 'максим', 'Владимир', 'сергей', 'НикиТа', 'евГений', ' Дарья', ' ', 'виктория ', 'ЕкаТерина', '', ' Андрей ', 'КИРИЛЛ']
 const nameCourse = 'Базовый React'
 
-let command = employers.filter(employer => employer && employer.length && employer.trim())
+const command = employers.filter(employer => employer && employer.length && employer.trim())
 command.forEach((item, index) => {
 	item = item.toLowerCase().trim()
 	command[index] = item[0].toUpperCase() + item.slice(1)
@@ -23,7 +23,7 @@ const calcCash = (own = 0, ...args) => {
 const lesson = calcCash(null, data.cash)
 
 const makeBusiness = (director, teacher = 'Максим', allModule, gang, course) => {
-	let sumTech = [...data.react, ...data.add, 'и другие']
+	const sumTech = [...data.react, ...data.add, 'и другие']
 	console.log(`Стартуем новый курс: "${course}". Владелец: ${director}, преподаватель: ${teacher}. Всего уроков: ${allModule}.
 Команда Академии: ${gang}
 Первое что изучим будет ${data.react[0]}. Он очень похож на HTML!
